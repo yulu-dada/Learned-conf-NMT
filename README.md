@@ -1,7 +1,8 @@
-# Our code is implemented on Fairseq.
+<b>Our code is implemented on Fairseq.</b>
 
-# Env: Fairseq-0.9, Pytorch-1.6
-# Code structure:
+<b>Env: Fairseq-0.9, Pytorch-1.6</b>
+
+<b>Code structure:</b>
 - mycode : Learned Confidence Estimate
 - mycode-ls: Confidence-based Label Smoothing
 
@@ -30,5 +31,6 @@ nohup fairseq-train $data_bin \
 3. For confidence-based LS task, the settings of λ_0 and β_0 are in Appendix. 
 
 # Inference
-```fairseq-generate $test_path --max-tokens 4200 --user-dir $user_dir --criterion my_label_smoothed_cross_entropy --task translation --path $model_path -s ch -t en --beam 4 --remove-bpe > $tgt.txt &
+```
+fairseq-generate $test_path --max-tokens 4200 --user-dir $user_dir --criterion my_label_smoothed_cross_entropy --task translation --path $model_path -s ch -t en --beam 4 --remove-bpe > $tgt.txt &
 ```
